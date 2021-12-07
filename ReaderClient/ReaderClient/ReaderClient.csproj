@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Public.SDK.RFID.LLRP.Std" Version="1.0.2018.24070" />
+    </ItemGroup>
+
+</Project>
