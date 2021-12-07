@@ -12,9 +12,15 @@ namespace ReaderClient.Tests
         public void ShouldConnect()
         {
             using var readerClient = new ReaderClient();
+            Assert.IsTrue(readerClient.Reader.IsConnected);
+        }
+
+        [Test]
+        public void ShouldReceiveEvents()
+        {
             uint msgID = 0;
             // wait around to collect some data.
-            for (int delay = 0; delay < 10; delay++)
+            for (var delay = 0; delay < 10; delay++)
             {
                 Thread.Sleep(10);
                 #region PollReaderReports
@@ -23,7 +29,7 @@ namespace ReaderClient.Tests
                 }
                 #endregion
             }
-            //Assert.IsTrue(readerClient.Reader.IsConnected);
+            Assert.IsTrue(true);
         }
     }
 }
